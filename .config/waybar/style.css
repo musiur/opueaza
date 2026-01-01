@@ -1,35 +1,175 @@
 * {
-  font-family: "JetBrains Mono"; 
-  font-size: 12px;
+  font-family: "SF Pro Display", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
   min-height: 0;
+  border: none;
+  border-radius: 0;
 }
 
 window#waybar {
-  background: rgba(20, 20, 20, 0.92);
-  border-bottom: 2px solid rgba(90, 90, 90, 0.4);
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin: 8px 12px 0px 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Workspaces */
+#workspaces {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin: 4px 0px 4px 8px;
+  padding: 2px 4px;
 }
 
 #workspaces button {
-  padding: 0 4px;
-  color: #888;
+  padding: 4px 8px;
+  margin: 2px;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #workspaces button.active {
-  color: #fff;
-  background: rgba(90, 90, 90, 0.4);
-  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-#clock,
+/* Clock */
+#clock {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 4px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Individual modules */
 #cpu,
 #memory,
-#brightness,
+#custom-brightness,
 #pulseaudio,
 #network,
-#battery,
-#tray {
-  padding: 0 8px;
-  color: #e0e0e0;
+#network.speed,
+#battery {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin: 4px 2px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
 }
 
+#cpu:hover,
+#memory:hover,
+#custom-brightness:hover,
+#pulseaudio:hover,
+#network:hover,
+#network.speed:hover,
+#battery:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
+/* CPU */
+#cpu {
+  color: #ff6b6b;
+}
+
+/* Memory */
+#memory {
+  color: #4ecdc4;
+}
+
+/* Brightness */
+#custom-brightness {
+  color: #ffd93d;
+}
+
+/* Audio */
+#pulseaudio {
+  color: #a29bfe;
+}
+
+#pulseaudio.muted {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Network */
+#network {
+  color: #00b894;
+}
+
+#network.disconnected {
+  color: #e17055;
+}
+
+/* Network Speed */
+#network.speed {
+  color: #74b9ff;
+  font-size: 11px;
+}
+
+/* Battery */
+#battery {
+  color: #00b894;
+}
+
+#battery.warning {
+  color: #fdcb6e;
+}
+
+#battery.critical {
+  color: #e17055;
+  animation: blink 1s linear infinite alternate;
+}
+
+@keyframes blink {
+  to {
+    background: rgba(225, 112, 85, 0.2);
+  }
+}
+
+/* System tray */
+#tray {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin: 4px 8px 4px 2px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#tray > .passive {
+  opacity: 0.6;
+}
+
+#tray > .needs-attention {
+  background: rgba(255, 107, 107, 0.2);
+  border-radius: 6px;
+}
+
+/* Tooltips */
+tooltip {
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+tooltip label {
+  color: #ffffff;
+}

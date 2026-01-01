@@ -1,15 +1,16 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 28,
-  "spacing": 6,
+  "height": 36,
+  "spacing": 0,
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
+    "network#speed",
     "cpu",
     "memory",
-    "brightness",
+    "custom/brightness",
     "pulseaudio",
     "network",
     "battery",
@@ -21,58 +22,115 @@
     "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "default": ""
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "default": "*"
     }
   },
 
   "clock": {
-    "format": "  {:%H:%M}",
-    "tooltip-format": "{:%A, %d %B %Y}"
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %B %d, %Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
   "cpu": {
-    "format": " {usage}%"
+    "format": "󰻠 {usage}%",
+    "tooltip": true,
+    "interval": 2
   },
 
   "memory": {
-    "format": " {used:0.1f}G"
+    "format": "󰍛 {used:0.1f}G",
+    "tooltip-format": "Memory: {used:0.1f}G / {total:0.1f}G ({percentage}%)"
+  },
+
+  "custom/brightness": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/brightness.sh",
+    "interval": 1,
+    "on-scroll-up": "~/.config/waybar/scripts/brightness.sh up",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness.sh down",
+    "tooltip": false
   },
 
   "pulseaudio": {
-    "format": "  {volume}%",
-    "format-muted": "󰝟 muted",
-    "scroll-step": 5
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󱡏",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "portable": "󰏲",
+      "car": "󰄋",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "tooltip-format": "{desc}"
   },
 
   "network": {
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "󰈀 wired",
-    "format-disconnected": "󰖪"
+    "format-wifi": "󰖩",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "Connected to {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
+    "tooltip-format-ethernet": "Connected via Ethernet\nIP: {ipaddr}",
+    "on-click": "nm-connection-editor"
+  },
+
+  "network#speed": {
+    "format": "󰓅 {bandwidthDownBits} 󰓆 {bandwidthUpBits}",
+    "format-disconnected": "󰖪 Offline",
+    "tooltip-format": "Download: {bandwidthDownBits}\nUpload: {bandwidthUpBits}",
+    "interval": 2
   },
 
   "battery": {
-    "format": "  {capacity}%",
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󱘖 {capacity}%",
+    "format-icons": {
+      "0": "󰂎",
+      "5": "󰁺",
+      "10": "󰁻",
+      "15": "󰁼",
+      "20": "󰁽",
+      "25": "󰁾",
+      "30": "󰁿",
+      "35": "󰂀",
+      "40": "󰂁",
+      "45": "󰂂",
+      "50": "󰁹",
+      "55": "󰂃",
+      "60": "󰂄",
+      "65": "󰂅",
+      "70": "󰂆",
+      "75": "󰂇",
+      "80": "󰂈",
+      "85": "󰂉",
+      "90": "󰂊",
+      "95": "󰂋",
+      "100": "󰁹"
+    },
     "states": {
       "warning": 30,
       "critical": 15
-    }
+    },
+    "tooltip-format": "Battery: {capacity}%\nTime: {time}"
   },
 
   "tray": {
-    "spacing": 8
-  },
-  "brightness": {
-	"format": " {brightness}%",
-	"exec": "~/.config/waybar/scripts/brightness.sh",
-	"interval": 1,
-	"on-click": "~/.config/waybar/scripts/brightness.sh",
-	"scroll-up": "~/.config/waybar/scripts/brightness.sh",
-	"scroll-down":  "~/.config/waybar/scripts/brightness.sh"
+    "spacing": 8,
+    "icon-size": 16
   }
 }
-
