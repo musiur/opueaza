@@ -1,0 +1,33 @@
+* {
+  font-family: JetBrains Mono;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(20, 20, 20, 0.92);
+  border-bottom: 2px solid rgba(90, 90, 90, 0.4);
+}
+
+#workspaces button {
+  padding: 0 8px;
+  color: #888;
+}
+
+#workspaces button.active {
+  color: #fff;
+  background: rgba(90, 90, 90, 0.4);
+  border-radius: 8px;
+}
+
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+  padding: 0 10px;
+  color: #e0e0e0;
+}
+
