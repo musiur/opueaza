@@ -8,16 +8,14 @@
 }
 
 window#waybar {
-  background: rgba(30, 30, 30, 0.85);
+  background: rgba(30, 30, 30, 0.80);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
   margin: 8px 12px 0px 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 /* Workspaces */
 #workspaces {
-  background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   margin: 4px 0px 4px 8px;
   padding: 2px 4px;
@@ -45,7 +43,6 @@ window#waybar {
 
 /* Clock */
 #clock {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
   color: #ffffff;
   border-radius: 8px;
   padding: 6px 12px;
@@ -62,9 +59,7 @@ window#waybar {
 #network,
 #network.speed,
 #battery {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
   color: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
   padding: 6px 10px;
   margin: 4px 2px;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -85,22 +80,26 @@ window#waybar {
 
 /* CPU */
 #cpu {
-  color: #ff6b6b;
+  background: #ff6b6b;
+  color: white;
 }
 
 /* Memory */
 #memory {
-  color: #4ecdc4;
+  background: #4ecdc4;
+  color:black;
 }
 
 /* Brightness */
 #custom-brightness {
-  color: #ffd93d;
+  background: #ffd93d;
+  color: black;
 }
 
 /* Audio */
 #pulseaudio {
-  color: #a29bfe;
+  background: #a29bfe;
+  color: black;
 }
 
 #pulseaudio.muted {
@@ -118,21 +117,24 @@ window#waybar {
 
 /* Network Speed */
 #network.speed {
-  color: #74b9ff;
-  font-size: 11px;
+  color: #fff;
+  font-size: 14px;
 }
 
 /* Battery */
 #battery {
-  color: #00b894;
+  background: #00b894;
+  color: white;
 }
 
 #battery.warning {
-  color: #fdcb6e;
+  background: #fdcb6e;
+  color: black;
 }
 
 #battery.critical {
-  color: #e17055;
+  background: #e17055;
+  color: white;
   animation: blink 1s linear infinite alternate;
 }
 
@@ -162,9 +164,7 @@ window#waybar {
 
 /* Tooltips */
 tooltip {
-  background: rgba(20, 20, 20, 0.9);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(20, 20, 20, 0.5);
   color: #ffffff;
   padding: 8px 12px;
   font-size: 12px;

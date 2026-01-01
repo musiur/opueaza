@@ -54,7 +54,7 @@
   },
 
   "custom/brightness": {
-    "format": "{}",
+    "format": "{brightness}%",
     "exec": "~/.config/waybar/scripts/brightness.sh",
     "interval": 1,
     "on-scroll-up": "~/.config/waybar/scripts/brightness.sh up",
