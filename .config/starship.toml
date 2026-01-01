@@ -1,0 +1,39 @@
+add_newline = false
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$python\
+$golang\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+[directory]
+style = "bold cyan"
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "red"
+format = "[$all_status$ahead_behind]($style)"
+
+[nodejs]
+symbol = " "
+style = "green"
+
+[python]
+symbol = " "
+style = "yellow"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
