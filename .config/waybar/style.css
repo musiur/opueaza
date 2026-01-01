@@ -10,7 +10,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 0 8px;
+  padding: 0 4px;
   color: #888;
 }
 
@@ -27,7 +27,7 @@ window#waybar {
 #network,
 #battery,
 #tray {
-  padding: 0 10px;
+  padding: 0 8px;
   color: #e0e0e0;
 }
 
