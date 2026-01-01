@@ -1,0 +1,6 @@
+# === swww config ===
+mode=fill
+transition=fade
+transition-duration=1.0
+backend=hyprland
+
