@@ -1,5 +1,5 @@
 * {
-  font-family: JetBrains Mono;
+  font-family: "JetBrains Mono"; 
   font-size: 12px;
   min-height: 0;
 }
@@ -23,6 +23,7 @@ window#waybar {
 #clock,
 #cpu,
 #memory,
+#brightness,
 #pulseaudio,
 #network,
 #battery,
@@ -30,4 +31,5 @@ window#waybar {
   padding: 0 8px;
   color: #e0e0e0;
 }
+
 
