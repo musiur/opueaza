@@ -12,6 +12,7 @@
     "memory",
     "custom/brightness",
     "pulseaudio",
+    "bluetooth",
     "network",
     "battery",
     "tray"
@@ -27,12 +28,7 @@
       "3": "3",
       "4": "4",
       "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10",
-      "default": "*"
+      "default": "󰊠"
     }
   },
 
@@ -54,7 +50,7 @@
   },
 
   "custom/brightness": {
-    "format": "{brightness}%",
+    "format": "{}",
     "exec": "~/.config/waybar/scripts/brightness.sh",
     "interval": 1,
     "on-scroll-up": "~/.config/waybar/scripts/brightness.sh up",
@@ -64,10 +60,10 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰝟",
+    "format-muted": "󰝟 {volume}%",
     "format-icons": {
       "headphone": "󰋋",
-      "hands-free": "󱡏",
+      "hands-free": "󰋎",
       "headset": "󰋎",
       "phone": "󰏲",
       "portable": "󰏲",
@@ -76,52 +72,46 @@
     },
     "scroll-step": 5,
     "on-click": "pavucontrol",
-    "tooltip-format": "{desc}"
+    "on-scroll-up": "~/.config/waybar/scripts/volume.sh up",
+    "on-scroll-down": "~/.config/waybar/scripts/volume.sh down",
+    "on-click-right": "~/.config/waybar/scripts/volume.sh toggle",
+    "tooltip-format": "Volume: {volume}%\nDevice: {desc}",
+    "max-volume": 100
   },
 
   "network": {
-    "format-wifi": "󰖩",
+    "format-wifi": "󰖩 {signalStrength}%",
     "format-ethernet": "󰈀",
     "format-disconnected": "󰖪",
-    "tooltip-format-wifi": "Connected to {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
-    "tooltip-format-ethernet": "Connected via Ethernet\nIP: {ipaddr}",
+    "tooltip-format-wifi": "WiFi: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
+    "tooltip-format-ethernet": "Ethernet: Connected\nIP: {ipaddr}",
+    "tooltip-format-disconnected": "Network: Disconnected",
     "on-click": "nm-connection-editor"
   },
 
   "network#speed": {
-    "format": "󰓅 {bandwidthDownBits} 󰓆 {bandwidthUpBits}",
-    "format-disconnected": "󰖪 Offline",
+    "format": "󰇚 {bandwidthDownBits} 󰕒 {bandwidthUpBits}",
+    "format-disconnected": "󰖪",
     "tooltip-format": "Download: {bandwidthDownBits}\nUpload: {bandwidthUpBits}",
     "interval": 2
+  },
+
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "tooltip-format": "Bluetooth: {status}",
+    "tooltip-format-connected": "Connected to: {device_alias}",
+    "on-click": "blueman-manager"
   },
 
   "battery": {
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-plugged": "󱘖 {capacity}%",
-    "format-icons": {
-      "0": "󰂎",
-      "5": "󰁺",
-      "10": "󰁻",
-      "15": "󰁼",
-      "20": "󰁽",
-      "25": "󰁾",
-      "30": "󰁿",
-      "35": "󰂀",
-      "40": "󰂁",
-      "45": "󰂂",
-      "50": "󰁹",
-      "55": "󰂃",
-      "60": "󰂄",
-      "65": "󰂅",
-      "70": "󰂆",
-      "75": "󰂇",
-      "80": "󰂈",
-      "85": "󰂉",
-      "90": "󰂊",
-      "95": "󰂋",
-      "100": "󰁹"
-    },
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "states": {
       "warning": 30,
       "critical": 15

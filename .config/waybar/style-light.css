@@ -9,7 +9,7 @@
 
 window#waybar {
   background: transparent;
-  color: #ffffff;
+  color: #2d3436;
 }
 
 /* Workspaces */
@@ -22,33 +22,33 @@ window#waybar {
 #workspaces button {
   padding: 4px 8px;
   margin: 2px;
-  color: #ffffff;
+  color: #2d3436;
   background: transparent;
   border-radius: 6px;
   transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: rgba(45, 52, 54, 0.1);
+  color: #2d3436;
 }
 
 #workspaces button.active {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: rgba(45, 52, 54, 0.15);
+  color: #2d3436;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Clock */
 #clock {
   background: transparent;
-  color: #ffffff;
+  color: #2d3436;
   padding: 6px 12px;
   margin: 4px;
   font-weight: 600;
 }
 
-/* All modules - white text */
+/* All modules - black text */
 #cpu,
 #memory,
 #custom-brightness,
@@ -58,7 +58,7 @@ window#waybar {
 #network.speed,
 #battery {
   background: transparent;
-  color: #ffffff;
+  color: #2d3436;
   padding: 6px 10px;
   margin: 4px 2px;
   transition: all 0.2s ease;
@@ -72,38 +72,38 @@ window#waybar {
 #network:hover,
 #network.speed:hover,
 #battery:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: rgba(45, 52, 54, 0.1);
+  color: #2d3436;
 }
 
-/* Muted/disabled states - dimmed white */
+/* Muted/disabled states - dimmed black */
 #pulseaudio.muted,
 #bluetooth.disabled,
 #bluetooth.off {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(45, 52, 54, 0.4);
 }
 
 #network.disconnected {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(45, 52, 54, 0.4);
 }
 
 #network.speed {
   font-size: 12px;
-  color: #ffffff;
+  color: #2d3436;
 }
 
 #battery.warning {
-  color: #ffffff;
+  color: #2d3436;
 }
 
 #battery.critical {
-  color: #ffffff;
+  color: #2d3436;
   animation: blink 1s linear infinite alternate;
 }
 
 @keyframes blink {
   to {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(45, 52, 54, 0.2);
   }
 }
 
@@ -119,20 +119,20 @@ window#waybar {
 }
 
 #tray > .needs-attention {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(45, 52, 54, 0.2);
   border-radius: 6px;
 }
 
 /* Tooltips */
 tooltip {
-  background: rgba(20, 20, 20, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  border: 1px solid rgba(45, 52, 54, 0.1);
+  color: #2d3436;
   padding: 8px 12px;
   font-size: 12px;
 }
 
 tooltip label {
-  color: #ffffff;
+  color: #2d3436;
 }
