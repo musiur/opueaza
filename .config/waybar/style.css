@@ -15,16 +15,16 @@ window#waybar {
 /* Workspaces */
 #workspaces {
   background: transparent;
-  margin: 4px 0px 4px 8px;
-  padding: 2px 4px;
+  margin: 2px 0px 2px 8px;
+  padding: 1px 4px;
 }
 
 #workspaces button {
-  padding: 4px 8px;
-  margin: 2px;
+  padding: 2px 6px;
+  margin: 1px;
   color: #ffffff;
   background: transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: all 0.2s ease;
 }
 
@@ -36,15 +36,14 @@ window#waybar {
 #workspaces button.active {
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Clock */
 #clock {
   background: transparent;
   color: #ffffff;
-  padding: 6px 12px;
-  margin: 4px;
+  padding: 4px 10px;
+  margin: 2px;
   font-weight: 600;
 }
 
@@ -59,8 +58,8 @@ window#waybar {
 #battery {
   background: transparent;
   color: #ffffff;
-  padding: 6px 10px;
-  margin: 4px 2px;
+  padding: 4px 8px;
+  margin: 2px 1px;
   transition: all 0.2s ease;
 }
 
@@ -110,8 +109,8 @@ window#waybar {
 /* System tray */
 #tray {
   background: transparent;
-  padding: 4px 8px;
-  margin: 4px 8px 4px 2px;
+  padding: 2px 6px;
+  margin: 2px 8px 2px 1px;
 }
 
 #tray > .passive {
