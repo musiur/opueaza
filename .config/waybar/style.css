@@ -9,7 +9,7 @@
 
 window#waybar {
   background: transparent;
-  color: #ffffff;
+  color: #010000;
 }
 
 /* Workspaces */
@@ -22,32 +22,34 @@ window#waybar {
 #workspaces button {
   padding: 2px 6px;
   margin: 1px;
-  color: #ffffff;
+  color: #010000;
   background: transparent;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: #353130;
+  opacity: 0.6;
+  color: #F8F8F8;
 }
 
 #workspaces button.active {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: #353130;
+  opacity: 0.8;
+  color: #F8F8F8;
 }
 
 /* Clock */
 #clock {
   background: transparent;
-  color: #ffffff;
+  color: #C57CD0;
   padding: 4px 10px;
   margin: 2px;
   font-weight: 600;
 }
 
-/* All modules - white text */
+/* All modules */
 #cpu,
 #memory,
 #custom-brightness,
@@ -57,7 +59,7 @@ window#waybar {
 #network.speed,
 #battery {
   background: transparent;
-  color: #ffffff;
+  color: #010000;
   padding: 4px 8px;
   margin: 2px 1px;
   transition: all 0.2s ease;
@@ -71,38 +73,69 @@ window#waybar {
 #network:hover,
 #network.speed:hover,
 #battery:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: #010000;
+  opacity: 0.5;
+  color: #010000;
 }
 
-/* Muted/disabled states - dimmed white */
+/* Specific module colors - Light theme (darker variants) */
+#cpu {
+  color: #803C7B;
+}
+
+#memory {
+  color: #82807E;
+}
+
+#custom-brightness {
+  color: #DAAF61;
+}
+
+#pulseaudio {
+  color: #ECECEC;
+}
+
+#bluetooth {
+  color: #C57CD0;
+}
+
+#network {
+  color: #353130;
+}
+
+#battery {
+  color: #803C7B;
+}
+
+/* Muted/disabled states */
 #pulseaudio.muted,
 #bluetooth.disabled,
 #bluetooth.off {
-  color: rgba(255, 255, 255, 0.4);
+  color: #A6A6A6;
 }
 
 #network.disconnected {
-  color: rgba(255, 255, 255, 0.4);
+  color: #A6A6A6;
 }
 
 #network.speed {
   font-size: 12px;
-  color: #ffffff;
+  color: #010000;
 }
 
 #battery.warning {
-  color: #ffffff;
+  color: #82807E;
 }
 
 #battery.critical {
-  color: #ffffff;
+  color: #353130;
   animation: blink 1s linear infinite alternate;
 }
 
 @keyframes blink {
   to {
-    background: rgba(255, 255, 255, 0.2);
+    background: #353130;
+    opacity: 0.6;
   }
 }
 
@@ -114,24 +147,26 @@ window#waybar {
 }
 
 #tray > .passive {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 #tray > .needs-attention {
-  background: rgba(255, 255, 255, 0.2);
+  background: #353130;
+  opacity: 0.6;
   border-radius: 6px;
 }
 
 /* Tooltips */
 tooltip {
-  background: rgba(20, 20, 20, 0.9);
+  background: #F8F8F8;
+  opacity: 0.95;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  border: 1px solid #010000;
+  color: #010000;
   padding: 8px 12px;
   font-size: 12px;
 }
 
 tooltip label {
-  color: #ffffff;
+  color: #010000;
 }
