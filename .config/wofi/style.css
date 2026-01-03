@@ -7,22 +7,22 @@ window {
   margin: 0;
   padding: 10px;
   border-radius: 14px;
-  background-color: #010000;
+  background-color: #212425;
   opacity: 0.92;
-  border: 2px solid #A6A6A6;
+  border: 2px solid #929972;
 }
 
 #input {
   margin: 10px;
   padding: 8px 12px;
   border-radius: 10px;
-  background-color: #010000;
-  color: #F8F8F8;
+  background-color: #464A4B;
+  color: #E4EBC5;
   border: none;
 }
 
 #input:focus {
-  background-color: #A6A6A6;
+  background-color: #929972;
   outline: none;
 }
 
@@ -41,20 +41,20 @@ window {
   padding: 8px 12px;
   border-radius: 8px;
   background-color: transparent;
-  color: #F8F8F8;
+  color: #E4EBC5;
   transition: all 0.2s ease;
   min-height: 40px;
 }
 
 #entry:selected {
-  background-color: #353130;
+  background-color: #535B64;
   opacity: 0.6;
-  color: #F8F8F8;
+  color: #E4EBC5;
   transform: scale(1.02);
 }
 
 #entry:hover {
-  background-color: #A6A6A6;
+  background-color: #929972;
   opacity: 0.4;
 }
 

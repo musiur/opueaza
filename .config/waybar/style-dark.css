@@ -9,7 +9,7 @@
 
 window#waybar {
   background: transparent;
-  color: #F8F8F8;
+  color: #E4EBC5;
 }
 
 /* Workspaces */
@@ -22,28 +22,28 @@ window#waybar {
 #workspaces button {
   padding: 2px 6px;
   margin: 1px;
-  color: #F8F8F8;
+  color: #E4EBC5;
   background: transparent;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  background: #353130;
+  background: #535B64;
   opacity: 0.25;
-  color: #F8F8F8;
+  color: #E4EBC5;
 }
 
 #workspaces button.active {
-  background: #353130;
+  background: #535B64;
   opacity: 0.4;
-  color: #F8F8F8;
+  color: #E4EBC5;
 }
 
 /* Clock */
 #clock {
   background: transparent;
-  color: #C57CD0;
+  color: #84894C;
   padding: 4px 10px;
   margin: 2px;
   font-weight: 600;
@@ -59,7 +59,7 @@ window#waybar {
 #network.speed,
 #battery {
   background: transparent;
-  color: #F8F8F8;
+  color: #E4EBC5;
   padding: 4px 8px;
   margin: 2px 1px;
   transition: all 0.2s ease;
@@ -73,68 +73,68 @@ window#waybar {
 #network:hover,
 #network.speed:hover,
 #battery:hover {
-  background: #A6A6A6;
+  background: #929972;
   opacity: 0.3;
-  color: #F8F8F8;
+  color: #E4EBC5;
 }
 
 /* Specific module colors - Dark theme */
 #cpu {
-  color: #803C7B;
+  color: #506A44;
 }
 
 #memory {
-  color: #82807E;
+  color: #748383;
 }
 
 #custom-brightness {
-  color: #DAAF61;
+  color: #B3B99E;
 }
 
 #pulseaudio {
-  color: #ECECEC;
+  color: #B2C759;
 }
 
 #bluetooth {
-  color: #C57CD0;
+  color: #84894C;
 }
 
 #network {
-  color: #353130;
+  color: #535B64;
 }
 
 #battery {
-  color: #803C7B;
+  color: #506A44;
 }
 
 /* Muted/disabled states */
 #pulseaudio.muted,
 #bluetooth.disabled,
 #bluetooth.off {
-  color: #A6A6A6;
+  color: #929972;
 }
 
 #network.disconnected {
-  color: #A6A6A6;
+  color: #929972;
 }
 
 #network.speed {
   font-size: 12px;
-  color: #EDEDED;
+  color: #D0DBA4;
 }
 
 #battery.warning {
-  color: #82807E;
+  color: #748383;
 }
 
 #battery.critical {
-  color: #353130;
+  color: #535B64;
   animation: blink 1s linear infinite alternate;
 }
 
 @keyframes blink {
   to {
-    background: #353130;
+    background: #535B64;
     opacity: 0.4;
   }
 }
@@ -151,22 +151,22 @@ window#waybar {
 }
 
 #tray > .needs-attention {
-  background: #353130;
+  background: #535B64;
   opacity: 0.4;
   border-radius: 6px;
 }
 
 /* Tooltips */
 tooltip {
-  background: #010000;
+  background: #212425;
   opacity: 0.9;
   border-radius: 8px;
-  border: 1px solid #A6A6A6;
-  color: #F8F8F8;
+  border: 1px solid #929972;
+  color: #E4EBC5;
   padding: 8px 12px;
   font-size: 12px;
 }
 
 tooltip label {
-  color: #F8F8F8;
+  color: #E4EBC5;
 }
