@@ -7,22 +7,22 @@ window {
   margin: 0;
   padding: 10px;
   border-radius: 14px;
-  background-color: #382932;
+  background-color: #110F12;
   opacity: 0.92;
-  border: 2px solid #A89E93;
+  border: 2px solid #8E8E93;
 }
 
 #input {
   margin: 10px;
   padding: 8px 12px;
   border-radius: 10px;
-  background-color: #5E4E57;
-  color: #FAF0E6;
+  background-color: #3A383A;
+  color: #E1E1E5;
   border: none;
 }
 
 #input:focus {
-  background-color: #A89E93;
+  background-color: #8E8E93;
   outline: none;
 }
 
@@ -41,20 +41,20 @@ window {
   padding: 8px 12px;
   border-radius: 8px;
   background-color: transparent;
-  color: #FAF0E6;
+  color: #E1E1E5;
   transition: all 0.2s ease;
   min-height: 40px;
 }
 
 #entry:selected {
-  background-color: #CF2B53;
+  background-color: #39360C;
   opacity: 0.6;
-  color: #FAF0E6;
+  color: #E1E1E5;
   transform: scale(1.02);
 }
 
 #entry:hover {
-  background-color: #A89E93;
+  background-color: #8E8E93;
   opacity: 0.4;
 }
 

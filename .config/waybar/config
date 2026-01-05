@@ -4,18 +4,15 @@
   "height": 28,
   "spacing": 0,
 
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["tray", "cpu", "memory", "hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
-    "network#speed",
-    "cpu",
-    "memory",
+    "network#speedclock",
     "custom/brightness",
     "pulseaudio",
     "bluetooth",
     "network",
-    "battery",
-    "tray"
+    "battery"
   ],
 
   "hyprland/workspaces": {
@@ -28,7 +25,12 @@
       "3": "3",
       "4": "4",
       "5": "5",
-      "default": "󰊠"
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "0": "10",
+      "default": " 󰊠 "
     }
   },
 
@@ -62,13 +64,13 @@
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 {volume}%",
     "format-icons": {
-      "headphone": "󰋋",
-      "hands-free": "󰋎",
-      "headset": "󰋎",
-      "phone": "󰏲",
-      "portable": "󰏲",
-      "car": "󰄋",
-      "default": ["󰕿", "󰖀", "󰕾"]
+      "headphone": " 󰋋 ",
+      "hands-free": " 󰋎 ",
+      "headset": " 󰋎 ",
+      "phone": " 󰏲 ",
+      "portable": " 󰏲 ",
+      "car": " 󰄋 ",
+      "default": [" 󰕿 ", " 󰖀 ", " 󰕾 "]
     },
     "scroll-step": 5,
     "on-click": "pavucontrol",
@@ -81,8 +83,8 @@
 
   "network": {
     "format-wifi": "󰖩 {signalStrength}%",
-    "format-ethernet": "󰈀",
-    "format-disconnected": "󰖪",
+    "format-ethernet": " 󰈀 ",
+    "format-disconnected": " 󰖪 ",
     "tooltip-format-wifi": "WiFi: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
     "tooltip-format-ethernet": "Ethernet: Connected\nIP: {ipaddr}",
     "tooltip-format-disconnected": "Network: Disconnected",
@@ -91,7 +93,7 @@
 
   "network#speed": {
     "format": "󰇚 {bandwidthDownBits} 󰕒 {bandwidthUpBits}",
-    "format-disconnected": "󰖪",
+    "format-disconnected": " 󰖪 ",
     "tooltip-format": "Download: {bandwidthDownBits}\nUpload: {bandwidthUpBits}",
     "interval": 2
   },
@@ -101,7 +103,7 @@
     "format-disabled": "󰂲",
     "format-off": "󰂲",
     "format-on": "󰂯",
-    "format-connected": "󰂱",
+    "format-connected": " 󰂱 ",
     "tooltip-format": "Bluetooth: {status}",
     "tooltip-format-connected": "Connected to: {device_alias}",
     "on-click": "blueman-manager"
